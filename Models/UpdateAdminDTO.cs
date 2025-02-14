@@ -1,13 +1,10 @@
-﻿namespace Project.Models.Entities
+﻿namespace Project.Models
 {
-    public class Supplier
+    public class UpdateAdminDTO
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public required string Name { get; set; }
         public required string Email { get; set; }
         public required string Password { get; set; }
-        public string? Phone { get; set; }
-
-
     }
 }
