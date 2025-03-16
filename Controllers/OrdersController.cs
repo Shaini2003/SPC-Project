@@ -10,8 +10,9 @@ using System.ComponentModel.DataAnnotations;
 namespace Project.Controllers
 {
     // localhost:xxxx/api/orders
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
+   
     public class OrdersController : ControllerBase
     {
         private readonly ApplicationDbContext dbContext;
@@ -19,7 +20,7 @@ namespace Project.Controllers
         {
             this.dbContext = dbContext;
         }
-
+        
         [HttpGet]
         public IActionResult GetAllOrders()
         {
@@ -89,5 +90,7 @@ namespace Project.Controllers
 
             return Ok();
         }
+
+        
     }
 }
